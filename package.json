@@ -1,28 +1,37 @@
 {
-  "name": "my-js-project",
+  "name": "tailwind-parcel-project",
   "version": "1.0.0",
-  "description": "A project to demonstrate JS, linters, and testing with JEST",
-  "main": "src/index.js",
+  "description": "Projecte que utilitza Tailwind CSS i Parcel",
   "scripts": {
-    "build": "npx tailwindcss -i ./src/input.css -o ./src/output.css --minify",
-    "watch": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch",
-    "test": "jest",
-    "lint": "eslint src/**/*.js",
-    "format": "prettier --write src/**/*.js"
+    "dev": "parcel src/index.html && parcel src/index.html --open",
+    "build": "parcel build src/index.html",
+    "optimitzar_imatge": "node optimitzar_imatge.js",
+    "dev-with-images": "npm run optimitzar_imatge && npm run dev",
+    "build-with-images": "npm run optimitzar_imatge && npm run build"
   },
   "keywords": [
-    "JS",
-    "VanillaJS",
-    "linters"
+    "tailwind",
+    "parcel",
+    "css",
+    "html",
+    "javascript"
   ],
-  "author": "Pablo Ros",
+  "author": "El teu nom",
+  "license": "ISC",
   "devDependencies": {
-    "eslint": "^7.32.0",
-    "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.24.2",
-    "eslint-plugin-jest": "^27.4.2",
-    "jest": "^29.7.0",
-    "prettier": "^2.8.8",
-    "tailwindcss": "^3.4.3"
+    "@parcel/transformer-postcss": "^2.10.0",
+    "autoprefixer": "^10.4.16",
+    "parcel": "^2.12.0",
+    "parcel-bundler": "^1.12.5",
+    "postcss": "^8.4.31",
+    "postcss-import": "^15.1.0",
+    "tailwindcss": "^3.3.3"
+  },
+  "dependencies": {
+    "flowbite": "^2.3.0",
+    "install": "^0.13.0",
+    "npm": "^10.5.2",
+    "sharp": "^0.33.3",
+    "simple-parallax-js": "^5.6.2"
   }
 }
